@@ -1,0 +1,18 @@
+#main-view {
+    padding-top: 90px;
+
+}
+#main-view h2 { margin-bottom: 2em; }
+
+.avatar{ display: inline-block; margin: 0 1.5em; }
+
+.field-error { border: 2px solid red;}
+
+.signup-submit{ margin: 0 1.5em; }
+
+.log-in label { margin-bottom: 0.8em;}
+.log-in input { margin-bottom: 1em;}
+
+.uses-container { text-align: center; }
+
+.float-right { float: right; }
