@@ -5,6 +5,9 @@ const port = process.env.PORT || 3000;
 
 app.use(express.static('public'));
 
+app.use('/ums', require('./routes/api.js'));
+
+
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/views/index.html');
     })

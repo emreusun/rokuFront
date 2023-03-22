@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- these are temporary workaround rules cuz sass is broken in the windows labs -->
+    <link rel="stylesheet" href="css/overrides.css">
     <title>:. Roku Flashback :. </title>
 </head>
 <body>
@@ -13,14 +16,14 @@
         <header>
             <img src="images/roku.svg" alt="Roku logo" width="90"><span>FlashBack</span>
             <nav class="float-right">
-                <ul>
+                <ul v-if="authentificated">
                     <li><i class="fas fa-user-circle"></i></li>
                     <li><i class="fas fa-cog"></i></li>
                     <li><i class="fas fa-power-off"></i></li>
                 </ul>
             </nav>
         </header>   
-        <router-view></router-view>
+        <router-view id="main-view"></router-view>
     </main>
     <!-- <h1>working</h1> -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
